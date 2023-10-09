@@ -3,10 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Does Tailwind need to go here? -->
+    <link rel="stylesheet" href="assets/style.css">
+
     <title>Group Project 1</title>
-    <link rel="stylesheet" href="./assets/style.css">
+
 </head>
 <body>
+    <!-- need to find the tailwind classes for all of our elements -->
+    <!-- header: jumbotron, m-3, p-3, bg-primary, text-light -->
+    <header>
+        <!-- container, text-center -->
+        <div>
+            <h1>Quote & Giphy Generator</h1>
+        </div>
+    </header>
+    <!-- container -->
+    <main>
+        <!-- row -->
+        <div>
+            <!-- col-12, col-md-3 -->
+            <section>
+                <form id="word-input-form">
+                    <!-- text-primary -->
+                    <label>Enter A Word:</label>
+                    <!-- form-control, my-2, text-primary -->
+                    <input type="search" id="word-input" placeholder="Type Word Here" />
+                    <!-- btn btn-outline-primary my-2 -->
+                    <button type="submit" id="input-button">Add Word</button>
+                </form>
+                <!-- btn btn-primary my-2 -->
+                <button type="submit" id="clear-words">Clear Words</button>
+
+                <hr />
+
+                <div id="saved-words">
+                    <!-- saved words will display here through JS -->
+                </div>
+
+                <div id="generated-quote">
+                    <!-- generated quote will display here through JS -->
+                </div>
+
+                <div id="generated-giphy">
+                    <!-- generated giphy will display here through JS -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Need to add Vue JS -->
     <script src="./assets/script.js"></script>
 </body>
 </html>
