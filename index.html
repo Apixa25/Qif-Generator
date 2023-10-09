@@ -14,10 +14,12 @@
 <body>
     <!-- need to find the tailwind classes for all of our elements -->
     <!-- header: jumbotron, m-3, p-3, bg-primary, text-light -->
-    <header class="relative overflow-hidden rounded-lg bg-cover bg-no-repeat p-12 text-center">
+    <header class="p-12 text-center">
         <!-- container, text-center -->
-        <div>
-            <h1 class="mb-4 text-4xl font-semibold">Quote & Giphy Generator</h1>
+        <div class="container text-center">
+            <h1 class="mb-4 text-4xl font-semibold">
+                Quote & Giphy Generator
+            </h1>
         </div>
     </header>
     <!-- container -->
@@ -25,17 +27,17 @@
         <!-- row -->
         <div>
             <!-- col-12, col-md-3 -->
-            <section>
-                <form id="word-input-form">
+            <section class="w-full max-w-xs">
+                <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <!-- text-primary -->
-                    <label>Enter A Word:</label>
+                    <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
                     <!-- form-control, my-2, text-primary -->
-                    <input type="search" id="word-input" placeholder="Type Word Here" />
+                    <input type="search" id="word-input" placeholder="Type Word Here" class="shadow appearance-none border rounded w-fit py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3"/>
                     <!-- btn btn-outline-primary my-2 -->
-                    <button type="submit" id="input-button">Add Word</button>
+                    <button type="submit" id="input-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Add Word</button>
                 </form>
                 <!-- btn btn-primary my-2 -->
-                <button type="submit" id="clear-words">Clear Words</button>
+                <button type="submit" id="clear-words" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Clear Words</button>
 
                 <hr />
 
