@@ -54,3 +54,10 @@ ACTION ITEMS:
     FETCH THE DATA - WHAT DATA? FETCH A QUOTE BASED OFF THE WORD INPUT, THE WORD IS THE CATEGORY 
     VIEW THE DATA = THIS IS THE "RESPONSE" FROM THE API TO US (THIS IS FOR US, NOT THE USER)
     DIPLAY THE DATA = THIS IS THE INERHTML PORITON = THIS IS THE PART THAT THE USER ACTUALLY SEES
+
+## RESOURCES:
+- Quotes API: https://api-ninjas.com/api/quotes
+- GIPHY API: https://developers.giphy.com/dashboard/ -> APIkey: T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC
+- CSS Framework: https://tailwindcss.com/
+- Third-Party API: https://vuejs.org/
+- Team Six Document: https://docs.google.com/document/d/177W1FZIYZbJCQoIUrh2FMPXjx8nMj2S77OAB2fnyOl0/edit
