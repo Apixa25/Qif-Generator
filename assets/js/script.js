@@ -74,12 +74,12 @@ function fetchQuote(wordValue) {
 fetchQuote();
 function fetchGiphy(wordValue) {
     var wordValue = "hello";
-    var giphyURL = `api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
+    var giphyURL = `https://api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
     console.log(giphyURL);
 
                 fetch(giphyURL)
                 .then(function (response) {
-                    // console.log("giphy: ", response)
+                    console.log("giphy: ", response)
                     return response.json();
                     
                 });
