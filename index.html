@@ -5,14 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- tailwind CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- vuejs CDN-->
-    <script src="https://unpkg.com/vue@next"></script>
 
     <!-- output.css implemented by Tailwind -->
     <link rel="stylesheet" href="assets/css/output.css">
     <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Quote & Giphy Generator</title>
+    <title>Qif - A quote and Gify Generator!</title>
 
 </head>
 <body>
@@ -31,14 +29,14 @@
         <!-- row -->
         <div>
             <!-- col-12, col-md-3 -->
-            <section class="w-full max-w-xs">
+            <section class=" w-full max-w-xs">
                 <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <!-- text-primary -->
                     <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
                     <!-- form-control, my-2, text-primary -->
                     <input type="search" id="word-input" placeholder="Type Word Here" class="shadow appearance-none border rounded w-fit py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3"/>
                     <!-- btn btn-outline-primary my-2 -->
-                    <button type="submit" id="input-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3" @click.prevent="addWord">Add Word</button>
+                    <button type="submit" id="input-button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Add Word</button>
                 </form>
                 <!-- btn btn-primary my-2 -->
                 <button type="submit" id="clear-words" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Clear Words</button>
@@ -46,6 +44,7 @@
                 <hr />
 
                 <div id="saved-words">
+                    <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Saved Word 1</button>
                     <!-- saved words will display here through JS -->
                 </div>
 
