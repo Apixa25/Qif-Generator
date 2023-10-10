@@ -59,26 +59,34 @@ function submitWord(e) {
 }
 
 function fetchQuote(wordValue) {
-    var wordValue = "happy";
-    var quoteURL = `https://zenquotes.io/api/quotes/[20f0ab3d282c49b93e06cf1487491f0d]&keyword=${wordValue}`;
+    var wordValue = "happiness";
+    var quoteURL = `https://zenquotes.io/api/quotes/20f0ab3d282c49b93e06cf1487491f0d&keyword=${wordValue}`;
+    console.log(quoteURL);
     fetch(quoteURL)
         .then(function (response) {
+            console.log(response);
             return response.json();
+            
         });
-        console.log("quote: ", response);
+        
         displayQuote();
 }
-
+fetchQuote();
 function fetchGiphy(wordValue) {
+    var wordValue = "hello";
     var giphyURL = `api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
-            fetch(giphyURL)
+    console.log(giphyURL);
+
+                fetch(giphyURL)
                 .then(function (response) {
+                    // console.log("giphy: ", response)
                     return response.json();
+                    
                 });
-                console.log("giphy: ", response)
+                
                 displayGiphy();
 }
-
+fetchGiphy();
 function displayQuote() {
 
 }
