@@ -53,13 +53,14 @@ var loggedWords = [];
 // ~~~~~~~~~~ FUNCTIONS & EVENT LISTENERS ~~~~~~~~~~ //
 function submitWord(e) {
     e.preventDefault();
-    var wordValue = wordInput.ariaValueMax;
+    var wordValue = wordInput.value;
     fetchQuote(wordValue);
     fetchGiphy(wordValue);
 }
 
 function fetchQuote(wordValue) {
-    var quoteURL = `https://zenquotes.io/api/random?option1=${wordValue}`;
+    var wordValue = "happy";
+    var quoteURL = `https://zenquotes.io/api/quotes/[20f0ab3d282c49b93e06cf1487491f0d]&keyword=${wordValue}`;
     fetch(quoteURL)
         .then(function (response) {
             return response.json();
