@@ -39,8 +39,8 @@ function quoteGenerator(wordValue) {
 
             generatedQuote.innerHTML = 
             `
-            <li><img src="${displayQuote[0].i}" /></li>
-            <li>${displayQuote[0].h}</li>
+            <img src="${displayQuote[0].i}" />
+            <p>${displayQuote[0].h}</p>
             `
         })
 }
@@ -57,6 +57,8 @@ function giphyGenerator(wordValue) {
                 loggedWords.push(wordValue);
                 localStorage.setItem("word", JSON.stringify(loggedWords));
             }
+
+            displaySavedWords();
 
             generatedGiphy.innerHTML =
             `
