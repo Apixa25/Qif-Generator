@@ -1,44 +1,6 @@
-// confirming that our js file is properly attached
-console.log("js file loading");
-
-// ~ \/ below is creating a variable in vue \/ ~ //
-// const app = Vue.createApp({
-//     template: '<h2>Hello CDN Vue</h2>'
-// });
-
-// ~ \/ below is how we add a script to an ID in the HTML \/ ~ //
-// app.mount('#app');
-
-// const savedWords = Vue.createApp({
-//     template: '<h2>This is where saved words can go</h2>'
-// });
-
-// savedWords.mount('#saved-words');
-
-// const generatedQuote = Vue.createApp({
-//     template: '<h2>This is where our generated quote can go</h2>'
-// });
-
-// generatedQuote.mount('#generated-quote');
-
-// const generatedGiphy = Vue.createApp({
-//     template: '<h2>This is where our generated GIPHY can go</h2>'
-// });
-
-// generatedGiphy.mount('#generated-giphy');
-
-// const addWord = Vue.createApp({
-//     method: {
-//         handleAddWord() {
-//         console.log("add word")
-//         } 
-//     }
-// })
-
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
-// ~~~~~~~~~~~~~~ VANILLA JAVASCRIPT ~~~~~~~~~~~~~~ //
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~ QIF-SCRIPT ~~~~~~~~~~~~~~~~ //
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // ~~~~~~~~~~ DOCUMENT SELECTORS ~~~~~~~~~~ //
 var wordInputForm = document.getElementById("word-input-form");
@@ -70,7 +32,7 @@ function quoteGenerator(wordValue) {
             console.log("our quote: ", displayQuote);
             generatedQuote.innerHTML = 
             `
-            <li><img src="${displayQuote[0].i}"></li>
+            <li><img src="${displayQuote[0].i}" /></li>
             <li>${displayQuote[0].h}</li>
             `
         })
@@ -85,10 +47,10 @@ function giphyGenerator(wordValue) {
                     return response.json();  
                 })
                 .then (function (displayGiphy) {
-                    console.log("our giphy: ", displayGiphy);
+                    console.log("our giphy: ", displayGiphy.data[0].images.downsized.url);
                     generatedGiphy.innerHTML =
                     `
-                    https://giphy.com/embed/${displayGiphy.data.embed_url}
+                    <img src="${displayGiphy.data[0].images.downsized.url}" />
                     `
                 })
 }
