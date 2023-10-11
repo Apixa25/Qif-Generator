@@ -22,14 +22,19 @@ function submitWord(e) {
 
 function quoteGenerator(wordValue) {
     var quoteURL = `https://zenquotes.io/api/quotes/20f0ab3d282c49b93e06cf1487491f0d&keyword=${wordValue}`;
-    console.log(quoteURL);
     fetch(quoteURL)
         .then(function (response) {
-            console.log("quote: ",response);
             return response.json();
         })
         .then (function (displayQuote) {
-            console.log("our quote: ", displayQuote);
+            console.log("word value: ", wordValue)
+            if (loggedWords.includes(wordValue) === false) {
+                loggedWords.push(wordValue);
+                localStorage.setItem("word", JSON.stringify(loggedWords));
+            }
+
+            displaySavedWords();
+
             generatedQuote.innerHTML = 
             `
             <li><img src="${displayQuote[0].i}" /></li>
@@ -40,14 +45,11 @@ function quoteGenerator(wordValue) {
 
 function giphyGenerator(wordValue) {
     var giphyURL = `https://api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
-    console.log(giphyURL);
                 fetch(giphyURL)
                 .then(function (response) {
-                    console.log("giphy: ", response)
                     return response.json();  
                 })
                 .then (function (displayGiphy) {
-                    console.log("our giphy: ", displayGiphy.data[0].images.downsized.url);
                     generatedGiphy.innerHTML =
                     `
                     <img src="${displayGiphy.data[0].images.downsized.url}" />
@@ -57,43 +59,29 @@ function giphyGenerator(wordValue) {
 
 
 function displaySavedWords() {
+
     if (localStorage.getItem("word")) {
         loggedWords = JSON.parse(localStorage.getItem("word"));
     }
 
     var wordList = "";
     for (let i = 0; i < loggedWords.length; i++) {
-        wordList = wordList + `<button class="my-2" type="submit">${loggedWords[i]}`;
+        wordList = wordList + `<button class="my-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3" type="submit">${loggedWords[i]}</button>`;
     }
-
-    savedWords.innerHTML - wordList;
+    
+    savedWords.innerHTML = wordList;
 
     var buttonMargin = document.querySelectorAll(".my-2");
     for (let i = 0; i < buttonMargin.length; i++) {
         buttonMargin[i].addEventListener("click", function() {
-            displayQuote(this.textContent);
-            displayGiphy(this.textContent);
+            quoteGenerator(this.textContent);
+            giphyGenerator(this.textContent);
         });
     }
 }
 
-
-
-// function displayResults(wordValue) {
-//     var quoteURL = `https://zenquotes.io/api/random?option1=${wordValue}`;
-//     fetch(quoteURL)
-//         .then(function (response) {
-//             return response.json();
-//         })
-//         .then(function (giphyData) {
-//             var giphyURL = `api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
-//             fetch(giphyURL)
-//                 .then(function (response) {
-//                     return response.json();
-//                 })
-//                 .then (function ())
-//         })
-// }
+displaySavedWords();
 
 
 wordInputForm.addEventListener("submit", submitWord);
+
