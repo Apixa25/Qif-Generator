@@ -54,46 +54,45 @@ var loggedWords = [];
 function submitWord(e) {
     e.preventDefault();
     var wordValue = wordInput.value;
-    fetchQuote(wordValue);
-    fetchGiphy(wordValue);
+    quoteGenerator(wordValue);
+    giphyGenerator(wordValue);
 }
 
-function fetchQuote(wordValue) {
-    var wordValue = "happiness";
+function quoteGenerator(wordValue) {
     var quoteURL = `https://zenquotes.io/api/quotes/20f0ab3d282c49b93e06cf1487491f0d&keyword=${wordValue}`;
     console.log(quoteURL);
     fetch(quoteURL)
         .then(function (response) {
-            console.log(response);
+            console.log("quote: ",response);
             return response.json();
-            
-        });
-        
-        displayQuote();
+        })
+        .then (function (displayQuote) {
+            console.log("our quote: ", displayQuote);
+            generatedQuote.innerHTML = 
+            `
+            <li><img src="${displayQuote[0].i}"></li>
+            <li>${displayQuote[0].h}</li>
+            `
+        })
 }
-fetchQuote();
-function fetchGiphy(wordValue) {
-    var wordValue = "hello";
+
+function giphyGenerator(wordValue) {
     var giphyURL = `https://api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
     console.log(giphyURL);
-
                 fetch(giphyURL)
                 .then(function (response) {
                     console.log("giphy: ", response)
-                    return response.json();
-                    
-                });
-                
-                displayGiphy();
+                    return response.json();  
+                })
+                .then (function (displayGiphy) {
+                    console.log("our giphy: ", displayGiphy);
+                    generatedGiphy.innerHTML =
+                    `
+                    https://giphy.com/embed/${displayGiphy.data.embed_url}
+                    `
+                })
 }
-fetchGiphy();
-function displayQuote() {
 
-}
-
-function displayGiphy() {
-
-}
 
 function displaySavedWords() {
     if (localStorage.getItem("word")) {
