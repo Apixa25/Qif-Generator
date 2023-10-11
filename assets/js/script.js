@@ -16,8 +16,10 @@ var loggedWords = [];
 function submitWord(e) {
     e.preventDefault();
     var wordValue = wordInput.value;
+    console.log("word value: ", wordValue)
     quoteGenerator(wordValue);
     giphyGenerator(wordValue);
+    wordInput.value = "";
 }
 
 function quoteGenerator(wordValue) {
@@ -27,7 +29,7 @@ function quoteGenerator(wordValue) {
             return response.json();
         })
         .then (function (displayQuote) {
-            console.log("word value: ", wordValue)
+            console.log("quote word value: ", wordValue)
             if (loggedWords.includes(wordValue) === false) {
                 loggedWords.push(wordValue);
                 localStorage.setItem("word", JSON.stringify(loggedWords));
@@ -45,16 +47,22 @@ function quoteGenerator(wordValue) {
 
 function giphyGenerator(wordValue) {
     var giphyURL = `https://api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
-                fetch(giphyURL)
-                .then(function (response) {
-                    return response.json();  
-                })
-                .then (function (displayGiphy) {
-                    generatedGiphy.innerHTML =
-                    `
-                    <img src="${displayGiphy.data[0].images.downsized.url}" />
-                    `
-                })
+        fetch(giphyURL)
+        .then(function (response) {
+            return response.json();  
+        })
+        .then (function (displayGiphy) {
+            console.log("giphy word value: ", wordValue)
+            if (loggedWords.includes(wordValue) === false) {
+                loggedWords.push(wordValue);
+                localStorage.setItem("word", JSON.stringify(loggedWords));
+            }
+
+            generatedGiphy.innerHTML =
+            `
+            <img src="${displayGiphy.data[0].images.downsized.url}" />
+            `
+        })
 }
 
 
@@ -66,14 +74,14 @@ function displaySavedWords() {
 
     var wordList = "";
     for (let i = 0; i < loggedWords.length; i++) {
-        wordList = wordList + `<button class="my-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3" type="submit">${loggedWords[i]}</button>`;
+        wordList = wordList + `<button class="my-word bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3" type="submit">${loggedWords[i]}</button>`;
     }
     
     savedWords.innerHTML = wordList;
 
-    var buttonMargin = document.querySelectorAll(".my-2");
-    for (let i = 0; i < buttonMargin.length; i++) {
-        buttonMargin[i].addEventListener("click", function() {
+    var myWord = document.querySelectorAll(".my-word");
+    for (let i = 0; i < myWord.length; i++) {
+        myWord[i].addEventListener("click", function() {
             quoteGenerator(this.textContent);
             giphyGenerator(this.textContent);
         });
@@ -85,3 +93,12 @@ displaySavedWords();
 
 wordInputForm.addEventListener("submit", submitWord);
 
+function clearSavedWords() {
+    localStorage.clear();
+    savedWords.innerHTML = "";
+    loggedWords = [];
+}
+
+clearWordsButton.addEventListener("click", function() {
+    clearSavedWords();
+})
