@@ -20,36 +20,19 @@
         <!-- container, text-center -->
         <div class="container text-center">
             <h1 class="mb-4 text-4xl font-semibold">
-                <img src="assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-12">
+                Qif
             </h1>
+            <h2>
+                Quote and Giphy Generator
+            </h2>
+            <img src="assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-12">
         </div>
     </header>
     <!-- container -->
     <main>
         <!-- row -->
-        <div>
+        <div class="flex flex-wrap">
             <!-- col-12, col-md-3 -->
-            <div class="grid grid-rows-3 grid-flow-col gap-4">
-                <div id="saved-words" class="row-span-5 col-span-3">
-                    <!-- saved words will display here through JS -->
-                </div>
-
-                <div id="generated-quote" class="row-span-5 col-span-4">
-                    <!-- generated quote will display here through JS -->
-                </div>
-
-                <div id="generated-giphy" class="row-span-5 col-span-5">
-                    <!-- generated giphy will display here through JS -->
-                </div>
-            </div>
-           
-           
-
-        
-              
-           
-
-
             <section class=" w-full max-w-xs">
                 
                 <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -65,28 +48,28 @@
                         <option value="confidence">Confidence</option>
                         <option value="courage">Courage</option>
                         <option value="death">Death</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="anxiety">Anxiety</option>
+                        <option value="dreams">Dreams</option>
+                        <option value="excellence">Excellence</option>
+                        <option value="failure">Failure</option>
+                        <option value="fairness">Fairness</option>
+                        <option value="fear">Fear</option>
+                        <option value="foregiveness">Foregiveness</option>
+                        <option value="freedom">Freedom</option>
+                        <option value="future">Future</option>
+                        <option value="happiness">Happiness</option>
+                        <option value="inspiration">Inspiration</option>
+                        <option value="kindness">Kindness</option>
+                        <option value="leadership">Leadership</option>
+                        <option value="life">Life</option>
+                        <option value="love">Love</option>
+                        <option value="pain">Pain</option>
+                        <option value="past">Past</option>
+                        <option value="success">Success</option>
+                        <option value="time">Time</option>
+                        <option value="today">Today</option>
+                        <option value="truth">Truth</option>
+                        <option value="work">Work</option>
+                        <option value="living">Living</option>
                     </select>
                     <!-- form-control, my-2, text-primary -->
                     
@@ -99,8 +82,22 @@
                 <hr />
                 
                
-
+                <div id="saved-words" class="w-64 p-3 m-3">
+                    <!-- saved words will display here through JS -->
+                </div>
             </section>
+            
+              
+                <div class="flex flex-wrap ">
+
+                <div id="generated-quote" class="w-64 p-3 m-3">
+                    <!-- generated quote will display here through JS -->
+                </div>
+
+                <div id="generated-giphy" class="w-64 p-3 m-3">
+                    <!-- generated giphy will display here through JS -->
+                </div>
+            </div>
         </div>
     </main>
 
