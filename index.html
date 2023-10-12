@@ -31,29 +31,8 @@
     <!-- container -->
     <main>
         <!-- row -->
-        <div>
+        <div class="flex flex-wrap">
             <!-- col-12, col-md-3 -->
-            <div class="grid grid-rows-3 grid-flow-col gap-4">
-                <div id="saved-words" class="row-span-5 col-span-3">
-                    <!-- saved words will display here through JS -->
-                </div>
-
-                <div id="generated-quote" class="row-span-5 col-span-4">
-                    <!-- generated quote will display here through JS -->
-                </div>
-
-                <div id="generated-giphy" class="row-span-5 col-span-5">
-                    <!-- generated giphy will display here through JS -->
-                </div>
-            </div>
-           
-           
-
-        
-              
-           
-
-
             <section class=" w-full max-w-xs">
                 
                 <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
@@ -103,8 +82,22 @@
                 <hr />
                 
                
-
+                <div id="saved-words" class="w-64 p-3 m-3">
+                    <!-- saved words will display here through JS -->
+                </div>
             </section>
+            
+              
+                <div class="flex flex-wrap ">
+
+                <div id="generated-quote" class="w-64 p-3 m-3">
+                    <!-- generated quote will display here through JS -->
+                </div>
+
+                <div id="generated-giphy" class="w-64 p-3 m-3">
+                    <!-- generated giphy will display here through JS -->
+                </div>
+            </div>
         </div>
     </main>
 
