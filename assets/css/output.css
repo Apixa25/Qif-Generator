@@ -927,3 +927,11 @@ video {
     color: rgb(229 229 229 / var(--tw-text-opacity));
   }
 }
+.canvas {
+  width: 100%;
+  height: 100vh;
+}
+.block-logo canvas, .block-logo .logo-mask {
+  width: 100%;
+  height: 100vh;
+}

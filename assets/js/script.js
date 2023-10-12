@@ -104,3 +104,11 @@ function clearSavedWords() {
 clearWordsButton.addEventListener("click", function() {
     clearSavedWords();
 })
+
+return (
+    <div className="bloc-logo">
+        <canvas id="logo-canvas">
+            <div className="logo-mask"></div>
+        </canvas>
+    </div>
+)
