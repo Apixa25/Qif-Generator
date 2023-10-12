@@ -46,7 +46,7 @@ function quoteGenerator(wordValue) {
 }
 
 function giphyGenerator(wordValue) {
-    var giphyURL = `https://api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
+    var giphyURL = `https://api.giphy.com/v1/gifs/random?tag=${wordValue}&rating=g&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
         fetch(giphyURL)
         .then(function (response) {
             return response.json();  
@@ -62,7 +62,7 @@ function giphyGenerator(wordValue) {
 
             generatedGiphy.innerHTML =
             `
-            <img src="${displayGiphy.data[0].images.downsized.url}" />
+            <img src="${displayGiphy.data.images.downsized.url}" />
             `
         })
 }
