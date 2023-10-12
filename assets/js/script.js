@@ -43,8 +43,10 @@ function quoteGenerator(wordValue) {
 
             generatedQuote.innerHTML = 
             `
+            <div class=" bg-blue-500 drop-shadow-lg p-5">
             <img src="${displayQuote[0].i}" />
             <p>${displayQuote[0].h}</p>
+            </div>
             `
         })
 }
@@ -65,8 +67,10 @@ function giphyGenerator(wordValue) {
             displaySavedWords();
 
             generatedGiphy.innerHTML =
-            `
+            ` 
+            <div class=" bg-blue-500 drop-shadow-lg p-5">
             <img src="${displayGiphy.data.images.downsized.url}" />
+            </div>
             `
         })
 }

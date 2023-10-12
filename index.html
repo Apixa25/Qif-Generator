@@ -16,22 +16,25 @@
 <body><canvas id="canvas-basic"></canvas>
     <!-- need to find the tailwind classes for all of our elements -->
     <!-- header: jumbotron, m-3, p-3, bg-primary, text-light -->
-    <header class="p-12 text-center header">
+    <header class=" p-12 text-center header">
         <!-- container, text-center -->
-        <div class="container text-center">
+        <div class="flex flex-wrap justify-center bg-blue-500 p-3 drop-shadow-lg">
+            <img src="./assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-28 grow-0">
+            <div class="p-3 grow-1">
             <h1 class="mb-4 text-4xl font-semibold">
                 Qif
             </h1>
             <h2>
                 Quote and Giphy Generator
             </h2>
-            <img src="./assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-12">
+            </div>
+            
         </div>
     </header>
     <!-- container -->
     <main>
         <!-- row -->
-        <div class="flex flex-wrap">
+        <div class="flex flex-wrap justify-center">
             <!-- col-12, col-md-3 -->
             <section class="m-3 w-full max-w-xs">
                 
@@ -77,7 +80,9 @@
                     <button type="submit" id="input-button" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Add Word</button>
                 </form>
                 <!-- btn btn-primary my-2 -->
+                <div class="flex flex-wrap justify-center">
                 <button type="submit" id="clear-words" class=" w-3/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Clear Words</button>
+                </div>
 
                 <hr />
                 
@@ -90,11 +95,11 @@
               
                 <div class="flex flex-wrap ">
 
-                <div id="generated-quote" class="w-64 p-3 m-3">
+                <div id="generated-quote" class="w-64 p-3 m-3 ">
                     <!-- generated quote will display here through JS -->
                 </div>
 
-                <div id="generated-giphy" class="w-64 p-3 m-3">
+                <div id="generated-giphy" class="w-64 p-3 m-3 ">
                     <!-- generated giphy will display here through JS -->
                 </div>
             </div>
