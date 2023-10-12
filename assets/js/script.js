@@ -3,9 +3,9 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // ~~~~~~~~~~ DOCUMENT SELECTORS ~~~~~~~~~~ //
-
+var chooseWord = document.getElementById("choose-word");
 var wordInputForm = document.getElementById("word-input-form");
-var wordInput = document.getElementById("word-input");
+var userName = document.getElementById("user-name");
 var inputButton = document.getElementById("input-button");
 var clearWordsButton = document.getElementById("clear-words");
 var savedWords = document.getElementById("saved-words");
@@ -17,11 +17,11 @@ var loggedWords = [];
 // ~~~~~~~~~~ FUNCTIONS & EVENT LISTENERS ~~~~~~~~~~ //
 function submitWord(e) {
     e.preventDefault();
-    var wordValue = wordInput.value;
+    var wordValue = chooseWord.value;
     console.log("word value: ", wordValue)
     quoteGenerator(wordValue);
     giphyGenerator(wordValue);
-    wordInput.value = "";
+    chooseWord.value = "";
 }
 
   
