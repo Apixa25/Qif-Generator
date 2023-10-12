@@ -11,18 +11,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 
     <title>Qif - A Quote and Giphy Generator!</title>
-<style>
-    /* #canvas-basic {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-} */
-</style>
+
 </head>
 <body>
     <!-- need to find the tailwind classes for all of our elements -->
@@ -31,12 +20,13 @@
         <!-- container, text-center -->
         <div class="container text-center">
             <h1 class="mb-4 text-4xl font-semibold">
-                <img src="assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-12">
+                <img src="assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-1/6">
             </h1>
         </div>
     </header>
     <!-- container -->
     <main>
+        
         <!-- row -->
         <div>
             <!-- col-12, col-md-3 -->
@@ -67,30 +57,43 @@
                 </div>
             </section>
         </div>
+        
+        <div class="bloc">
+            <canvas id="canvas-basic"></canvas>
+        </div>
+
     </main>
 
-
-    <script src="assets/js/script.js"></script>
-
-    <canvas id="canvas-basic"></canvas>
-
     <script src="./assets/granim.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <canvas id="Granim"></canvas>
     
     <script>
     var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'left-right',
     isPausedWhenNotInView: true,
+    background: true,
     states : {
         "default-state": {
             gradients: [
-                ['#ff9966', '#ff5e62'],
-                ['#00F260', '#0575E6'],
-                ['#e1eec3', '#f05053']
+                [
+                    { color: '#833ab4', pos: .2 },
+                    { color: '#fd1d1d', pos: .8 },
+                    { color: '#38ef7d', pos: 1 }
+                ], [
+                    { color: '#40e0d0', pos: 0 },
+                    { color: '#ff8c00', pos: .2 },
+                    { color: '#ff0080', pos: .75 }
+                ],
             ]
         }
     }
-})
-    </script>
+});
+</script>
+
+    
+
+
 </body>
 </html>
