@@ -3,8 +3,9 @@
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ //
 
 // ~~~~~~~~~~ DOCUMENT SELECTORS ~~~~~~~~~~ //
+var chooseWord = document.getElementById("choose-word");
 var wordInputForm = document.getElementById("word-input-form");
-var wordInput = document.getElementById("word-input");
+var userName = document.getElementById("user-name");
 var inputButton = document.getElementById("input-button");
 var clearWordsButton = document.getElementById("clear-words");
 var savedWords = document.getElementById("saved-words");
@@ -12,15 +13,18 @@ var generatedQuote = document.getElementById("generated-quote");
 var generatedGiphy = document.getElementById("generated-giphy");
 var loggedWords = [];
 
+
 // ~~~~~~~~~~ FUNCTIONS & EVENT LISTENERS ~~~~~~~~~~ //
 function submitWord(e) {
     e.preventDefault();
-    var wordValue = wordInput.value;
+    var wordValue = chooseWord.value;
     console.log("word value: ", wordValue)
     quoteGenerator(wordValue);
     giphyGenerator(wordValue);
-    wordInput.value = "";
+    chooseWord.value = "";
 }
+
+  
 
 function quoteGenerator(wordValue) {
     var quoteURL = `https://zenquotes.io/api/quotes/20f0ab3d282c49b93e06cf1487491f0d&keyword=${wordValue}`;

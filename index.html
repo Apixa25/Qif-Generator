@@ -29,12 +29,67 @@
         <!-- row -->
         <div>
             <!-- col-12, col-md-3 -->
+            <div class="grid grid-rows-3 grid-flow-col gap-4">
+                <div id="saved-words" class="row-span-5 col-span-3">
+                    <!-- saved words will display here through JS -->
+                </div>
+
+                <div id="generated-quote" class="row-span-5 col-span-4">
+                    <!-- generated quote will display here through JS -->
+                </div>
+
+                <div id="generated-giphy" class="row-span-5 col-span-5">
+                    <!-- generated giphy will display here through JS -->
+                </div>
+            </div>
+           
+           
+
+        
+              
+           
+
+
             <section class=" w-full max-w-xs">
+                
                 <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
                     <!-- text-primary -->
-                    <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
+                    <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Name:</label>
+                    <input type="search" id="user-name" placeholder="Type name Here" class="shadow appearance-none border rounded w-fit py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3"/>
+                     <!-- drop down input fields -->
+                     <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
+                    <select name="word" id="choose-word">
+                        <option value="anxiety">Anxiety</option>
+                        <option value="change">Change</option>
+                        <option value="choice">Choice</option>
+                        <option value="confidence">Confidence</option>
+                        <option value="courage">Courage</option>
+                        <option value="death">Death</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                        <option value="anxiety">Anxiety</option>
+                    </select>
                     <!-- form-control, my-2, text-primary -->
-                    <input type="search" id="word-input" placeholder="Type Word Here" class="shadow appearance-none border rounded w-fit py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3"/>
+                    
                     <!-- btn btn-outline-primary my-2 -->
                     <button type="submit" id="input-button" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Add Word</button>
                 </form>
@@ -42,18 +97,9 @@
                 <button type="submit" id="clear-words" class=" bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Clear Words</button>
 
                 <hr />
+                
+               
 
-                <div id="saved-words" class="">
-                    <!-- saved words will display here through JS -->
-                </div>
-
-                <div id="generated-quote" class="">
-                    <!-- generated quote will display here through JS -->
-                </div>
-
-                <div id="generated-giphy" class="">
-                    <!-- generated giphy will display here through JS -->
-                </div>
             </section>
         </div>
     </main>
