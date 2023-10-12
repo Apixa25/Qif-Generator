@@ -47,7 +47,7 @@ function quoteGenerator(wordValue) {
             <p>${displayQuote[0].h}</p>
             `
         })
-}https://api.giphy.com/v1/gifs/random?tag=happiness&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC
+}
 
 function giphyGenerator(wordValue) {
     var giphyURL = `https://api.giphy.com/v1/gifs/search?q=${wordValue}&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
