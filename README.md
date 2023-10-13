@@ -51,18 +51,18 @@ We learned how to create a gradient background using granim. We were reminded on
 
 ![lesson 2 HTML](assets/img/lesson2c.png)
 
-#### 3. TBD
-Description
+#### 3. working with new serverside API's
+How to use the queries, avoid queries we dont want, and how to narrow it down to the ones we do want.
 <br />
 ![lesson 3](assets/img/lesson3.png)
 
-#### 4. TBD
-Description
+#### 4. Using GitHub Projects
+Figuring out how to assign people to certain tasks, what are valuable tasks to put on the board, and how often to review the tasks together.
 <br />
 ![lesson 4](assets/img/lesson4.png)
 
 #### Synopsis
-Description
+We learned how to work with professional tools and professionally with a group. We also learned how to effectively work with different API'S and frameworks other than ones covered in our classes.
 
 ## Installation
 
@@ -91,7 +91,7 @@ Copyright (c) 2023
 - [LinkedIn](https://www.linkedin.com/in/andi-petersen-60016b187/)
 
 ### Steven Sills II
-Description
+
 - [LinkedIn](https://www.linkedin.com/in/steven-sills-ii-90781b53/)
 - [Github](https://github.com/Apixa25)
 - [Portfolio](https://apixa25.github.io/steven-sills-portfolio/)
