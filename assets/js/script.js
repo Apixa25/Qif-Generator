@@ -11,6 +11,7 @@ var clearWordsButton = document.getElementById("clear-words");
 var savedWords = document.getElementById("saved-words");
 var generatedQuote = document.getElementById("generated-quote");
 var generatedGiphy = document.getElementById("generated-giphy");
+var intro = document.getElementById("intro");
 var loggedWords = [];
 
 
@@ -40,7 +41,13 @@ function quoteGenerator(wordValue) {
             }
 
             displaySavedWords();
-
+            intro.style.display = "none";
+            // intro.innerHTML = 
+            // `
+            // <div class=" bg-blue-500 drop-shadow-lg p-5 text-white">
+            // <p class="p-3">Hey there ${nameValue}! Here is your quote and gif:</p>
+            // </div>
+            // `;
             generatedQuote.innerHTML = 
             `
             <div class=" bg-blue-500 drop-shadow-lg p-5 text-white">
