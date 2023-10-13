@@ -34,13 +34,13 @@ How to use this app:
 
 ### Lessons Learned
 
-#### 1. TBD
-Description
+#### 1. Working with Tailwind
+We learned different classes in Tailwind and how to properly use them to affect our layout.
 <br />
 ![lesson 1](assets/img/lesson1.png)
 
-#### 2. TBD
-Description
+#### 2. Working with granim
+We learned how to create a gradient background using granim. We were reminded on the z-index during this part of the project.
 <br />
 ![lesson 2](assets/img/lesson2.png)
 
@@ -79,11 +79,9 @@ Copyright (c) 2023 Twixmixy / Janet Webster
 
 ## About The Authors
 ### Andersen Petersen
-Description
-- socials
-- socials
-- socials
-- socials
+
+- [GitHub] (https://github.com/Antedbell20)
+- [LinkedIn](https://www.linkedin.com/in/andi-petersen-60016b187/)
 
 ### Steven Sills II
 Description
