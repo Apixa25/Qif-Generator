@@ -43,9 +43,9 @@ function quoteGenerator(wordValue) {
 
             generatedQuote.innerHTML = 
             `
-            <div class=" bg-blue-500 drop-shadow-lg p-5">
+            <div class=" bg-blue-500 drop-shadow-lg p-5 text-white">
             <img src="${displayQuote[0].i}" />
-            <p>${displayQuote[0].h}</p>
+            <p class="p-3">${displayQuote[0].h}</p>
             </div>
             `
         })
@@ -87,7 +87,7 @@ function displaySavedWords() {
 
     var wordList = "";
     for (let i = 0; i < loggedWords.length; i++) {
-        wordList = wordList + `<button class="w-full my-word bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3" type="submit">${loggedWords[i]}</button>`;
+        wordList = wordList + `<button class="w-full my-word bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3" type="submit">${loggedWords[i]}</button>`;
     }
     
     savedWords.innerHTML = wordList;
