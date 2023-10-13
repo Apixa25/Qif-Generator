@@ -18,7 +18,7 @@
     <!-- header: jumbotron, m-3, p-3, bg-primary, text-light -->
     <header class=" p-12 text-center header">
         <!-- container, text-center -->
-        <div class="flex flex-wrap justify-center bg-blue-500 p-3 drop-shadow-lg">
+        <div class="flex flex-wrap justify-center bg-blue-500 p-3 drop-shadow-lg border rounded">
             <img src="./assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-28 grow-0">
             <div class="p-3 grow-1">
             <h1 class="mb-4 text-4xl font-semibold">
@@ -38,13 +38,13 @@
             <!-- col-12, col-md-3 -->
             <section class="m-3 w-full max-w-xs">
                 
-                <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+                <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 m-4 border">
                     <!-- text-primary -->
                     <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Name:</label>
-                    <input type="search" id="user-name" placeholder="Type name Here" class="shadow appearance-none border rounded w-fit py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3"/>
+                    <input type="search" id="user-name" placeholder="Your Name Here" class="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3 font-bold"/>
                      <!-- drop down input fields -->
                      <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
-                    <select name="word" id="choose-word">
+                    <select name="word" id="choose-word" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">
                         <option value="anxiety">Anxiety</option>
                         <option value="change">Change</option>
                         <option value="choice">Choice</option>
@@ -77,11 +77,11 @@
                     <!-- form-control, my-2, text-primary -->
                     
                     <!-- btn btn-outline-primary my-2 -->
-                    <button type="submit" id="input-button" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Add Word</button>
+                    <button type="submit" id="input-button" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">Add Word</button>
                 </form>
                 <!-- btn btn-primary my-2 -->
                 <div class="flex flex-wrap justify-center">
-                <button type="submit" id="clear-words" class=" w-3/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded m-3">Clear Words</button>
+                <button type="submit" id="clear-words" class=" w-3/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">Clear Words</button>
                 </div>
 
                 <hr />
