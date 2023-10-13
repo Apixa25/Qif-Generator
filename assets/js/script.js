@@ -41,13 +41,7 @@ function quoteGenerator(wordValue) {
             }
 
             displaySavedWords();
-            intro.style.display = "none";
-            // intro.innerHTML = 
-            // `
-            // <div class=" bg-blue-500 drop-shadow-lg p-5 text-white">
-            // <p class="p-3">Hey there ${nameValue}! Here is your quote and gif:</p>
-            // </div>
-            // `;
+
             generatedQuote.innerHTML = 
             `
             <div class=" bg-blue-500 drop-shadow-lg p-5 text-white">
@@ -75,7 +69,7 @@ function giphyGenerator(wordValue, nameValue) {
             }
 
             displaySavedWords();
-
+            intro.style.display = "none";
             generatedGiphy.innerHTML =
             ` 
             <div class=" bg-blue-500 drop-shadow-lg p-5">
@@ -84,7 +78,6 @@ function giphyGenerator(wordValue, nameValue) {
             `
         })
 }
-
 
 function displaySavedWords() {
 
