@@ -16,7 +16,7 @@
 <body><canvas id="canvas-basic"></canvas>
     <!-- need to find the tailwind classes for all of our elements -->
     <!-- header: jumbotron, m-3, p-3, bg-primary, text-light -->
-    <header class=" p-12 text-center header">
+    <header class=" p-6 text-center header">
         <!-- container, text-center -->
         <div class="flex flex-wrap justify-center text-white bg-blue-500 p-3 drop-shadow-lg border rounded">
             <img src="./assets/img/qimage.jfif" alt="Qif Logo - Quote & Giphy Generator" class="w-32 m-5">
@@ -34,66 +34,73 @@
     <!-- container -->
     <main>
         <!-- row -->
-        <div class="flex flex-wrap justify-center">
-            <!-- col-12, col-md-3 -->
-            <section class="m-3 w-full max-w-xs">
-                
-                <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 m-4 border">
-                    <!-- text-primary -->
-                    <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Name:</label>
-                    <input type="search" id="user-name" placeholder="Your Name Here" class="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3 font-bold"/>
-                     <!-- drop down input fields -->
-                     <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
-                    <select name="word" id="choose-word" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3" required>
-                        <option value="anxiety">Anxiety</option>
-                        <option value="change">Change</option>
-                        <option value="choice">Choice</option>
-                        <option value="confidence">Confidence</option>
-                        <option value="courage">Courage</option>
-                        <option value="death">Death</option>
-                        <option value="dreams">Dreams</option>
-                        <option value="excellence">Excellence</option>
-                        <option value="failure">Failure</option>
-                        <option value="fairness">Fairness</option>
-                        <option value="fear">Fear</option>
-                        <option value="forgiveness">Forgiveness</option>
-                        <option value="freedom">Freedom</option>
-                        <option value="future">Future</option>
-                        <option value="happiness">Happiness</option>
-                        <option value="inspiration">Inspiration</option>
-                        <option value="kindness">Kindness</option>
-                        <option value="leadership">Leadership</option>
-                        <option value="life">Life</option>
-                        <option value="love">Love</option>
-                        <option value="pain">Pain</option>
-                        <option value="past">Past</option>
-                        <option value="success">Success</option>
-                        <option value="time">Time</option>
-                        <option value="today">Today</option>
-                        <option value="truth">Truth</option>
-                        <option value="work">Work</option>
-                        <option value="living">Living</option>
-                    </select>
-                    <!-- form-control, my-2, text-primary -->
-                    
-                    <!-- btn btn-outline-primary my-2 -->
-                    <button type="submit" id="input-button" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">Add Word</button>
-                </form>
-                <!-- btn btn-primary my-2 -->
-                <div class="flex flex-wrap justify-center">
-                <button type="submit" id="clear-words" class=" w-3/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">Clear Words</button>
+        <div class="flex flex-wrap flex-row justify-around">
+            <div class="intro px-3 mx-3 w-full" id="intro">
+                <div class="bg-blue-500 drop-shadow-lg p-5 text-white">
+                    Greetings! Welcome to the Quote & Giphy Generator. To use this app all you need to do is choose your preferred word and click "Add Word" to add it to your favorites list. For fun you can also add your name to customize the results to YOU!
                 </div>
+            </div>
+            <!-- col-12, col-md-3 -->
+            <section class="m-3 max-w-xs flex flex-wrap">
+                <div>
+                    <form id="word-input-form" class="bg-white shadow-md rounded px-8 pt-6 pb-8 m-4 border">
+                        <!-- text-primary -->
+                        <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Name:</label>
+                        <input type="search" id="user-name" placeholder="Your Name Here" class="w-full shadow appearance-none border rounded py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline m-3 font-bold"/>
+                        <!-- drop down input fields -->
+                        <label class="block text-gray-700 text-lg font-bold mb-2">Enter A Word:</label>
+                        <select name="word" id="choose-word" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3" required>
+                            <option value="anxiety">Anxiety</option>
+                            <option value="change">Change</option>
+                            <option value="choice">Choice</option>
+                            <option value="confidence">Confidence</option>
+                            <option value="courage">Courage</option>
+                            <option value="death">Death</option>
+                            <option value="dreams">Dreams</option>
+                            <option value="excellence">Excellence</option>
+                            <option value="failure">Failure</option>
+                            <option value="fairness">Fairness</option>
+                            <option value="fear">Fear</option>
+                            <option value="forgiveness">Forgiveness</option>
+                            <option value="freedom">Freedom</option>
+                            <option value="future">Future</option>
+                            <option value="happiness">Happiness</option>
+                            <option value="inspiration">Inspiration</option>
+                            <option value="kindness">Kindness</option>
+                            <option value="leadership">Leadership</option>
+                            <option value="life">Life</option>
+                            <option value="love">Love</option>
+                            <option value="pain">Pain</option>
+                            <option value="past">Past</option>
+                            <option value="success">Success</option>
+                            <option value="time">Time</option>
+                            <option value="today">Today</option>
+                            <option value="truth">Truth</option>
+                            <option value="work">Work</option>
+                            <option value="living">Living</option>
+                        </select>
+                        <!-- form-control, my-2, text-primary -->
+                        
+                        <!-- btn btn-outline-primary my-2 -->
+                        <button type="submit" id="input-button" class="w-full bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">Add Word</button>
+                    </form>
+                    <!-- btn btn-primary my-2 -->
+                    <div class="flex flex-wrap justify-center">
+                    <button type="submit" id="clear-words" class=" w-3/4 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 border rounded m-3">Clear Words</button>
+                    </div>
 
-                <hr />
+                    <hr />
+                    
                 
-               
-                <div id="saved-words" class="w-64 p-3 m-3">
-                    <!-- saved words will display here through JS -->
+                    <div id="saved-words" class="w-64 p-3 m-3">
+                        <!-- saved words will display here through JS -->
+                    </div>
                 </div>
             </section>
             
               
-                <div class="flex flex-wrap justify-center">
+            <div class="flex flex-col">
+                
 
                 <div id="generated-quote" class="w-96 p-3 m-3 ">
                     <!-- generated quote will display here through JS -->
