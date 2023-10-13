@@ -51,8 +51,8 @@ We learned how to create a gradient background using granim. We were reminded on
 
 ![lesson 2 HTML](assets/img/lesson2c.png)
 
-#### 3. working with new serverside API's
-How to use the queries, avoid queries we dont want, and how to narrow it down to the ones we do want.
+#### 3. Working with new server-side API's
+We learned how to use queries and review them in the browser. Through reviewing them we could determine if they would be a good API for us in our project. Additionally we utilized the console.log frequently to test the fetch response to determine exactly how we could implement the data.
 <br />
 ![lesson 3](assets/img/lesson3.png)
 
@@ -62,7 +62,7 @@ Figuring out how to assign people to certain tasks, what are valuable tasks to p
 ![lesson 4](assets/img/lesson4.png)
 
 #### Synopsis
-We learned how to work with professional tools and professionally with a group. We also learned how to effectively work with different API'S and frameworks other than ones covered in our classes.
+We learned how to work with professional tools and professionally within a group. We also learned how to effectively work with different API'S and frameworks other than ones covered in our classes. This was a great opportunity for us to bring together all the skills we learned in the first three weeks of the course.
 
 ## Installation
 

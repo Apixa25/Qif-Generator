@@ -15,18 +15,21 @@ var intro = document.getElementById("intro");
 var loggedWords = [];
 
 
-// ~~~~~~~~~~ FUNCTIONS & EVENT LISTENERS ~~~~~~~~~~ //
+// ~~~~ FUNCTIONS & EVENT LISTENERS ~~~~ //
+
+// This function takes value of the word submitted and passes it to the generator functions. It also clears out the input field after submission.
 function submitWord(e) {
     e.preventDefault();
     var wordValue = chooseWord.value;
-    console.log("word value: ", wordValue)
+    // console.log("word value: ", wordValue)
     quoteGenerator(wordValue);
     var nameValue = userName.value;
-    console.log("name value: ", nameValue)
+    // console.log("name value: ", nameValue)
     giphyGenerator(wordValue, nameValue);
     chooseWord.value = "";
 }
 
+// This function handles the quote API. Passing the word through the parameter. After receiving the response the value is saved to localstorage and then passes it to the saved words function. Finally the response is placed in the display.
 function quoteGenerator(wordValue) {
     var quoteURL = `https://zenquotes.io/api/quotes/20f0ab3d282c49b93e06cf1487491f0d&keyword=${wordValue}`;
     fetch(quoteURL)
@@ -52,6 +55,7 @@ function quoteGenerator(wordValue) {
         })
 }
 
+// This function is the same as the Quote function, however it additionally takes the users name and combines it with the word input to make the API call.
 function giphyGenerator(wordValue, nameValue) {
     var spaceBetween = " ";
     var searchTerm = wordValue +  spaceBetween + nameValue;
@@ -79,6 +83,7 @@ function giphyGenerator(wordValue, nameValue) {
         })
 }
 
+// This function displays all words previously used so that they can be re-used quickly. It pulls the data out of local storage to create the saved words buttons.
 function displaySavedWords() {
 
     if (localStorage.getItem("word")) {
@@ -103,21 +108,23 @@ function displaySavedWords() {
 
 displaySavedWords();
 
-
+// This event listener initiates the submitted word function.
 wordInputForm.addEventListener("submit", submitWord);
 
+// Our function to clear all the saved words
 function clearSavedWords() {
     localStorage.clear();
     savedWords.innerHTML = "";
     loggedWords = [];
 }
 
+// Event listener to initiate clearing the saved words.
 clearWordsButton.addEventListener("click", function() {
     clearSavedWords();
 })
 
 
-// this is our Granim stuff
+// this is our Granim functionality
 var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'left-right',
