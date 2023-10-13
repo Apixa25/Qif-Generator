@@ -85,10 +85,10 @@ Copyright (c) 2023 Twixmixy / Janet Webster
 
 ### Steven Sills II
 Description
-- socials
-- socials
-- socials
-- socials
+- [LinkedIn](https://www.linkedin.com/in/steven-sills-ii-90781b53/)
+- [Github](https://github.com/Apixa25)
+- [Portfolio](https://apixa25.github.io/steven-sills-portfolio/)
+
 
 ### Janet Webster
 Full Stack MERN Software Engineer in training.
