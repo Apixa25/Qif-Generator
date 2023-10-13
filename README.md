@@ -35,14 +35,21 @@ How to use this app:
 ### Lessons Learned
 
 #### 1. Working with Tailwind
-We learned different classes in Tailwind and how to properly use them to affect our layout.
+We learned different classes in Tailwind and how to properly use them to affect our layout. We took lessons from learning Boostrap and reverse engineered some terms to find what we needed. We also consulted the documentation, which was very helpful.
 <br />
 ![lesson 1](assets/img/lesson1.png)
 
 #### 2. Working with granim
-We learned how to create a gradient background using granim. We were reminded on the z-index during this part of the project.
+We learned how to create a gradient background using granim. We were reminded on the z-index during this part of the project. For this tool we had to utilize JS, CSS, and HTML to implement.
 <br />
-![lesson 2](assets/img/lesson2.png)
+
+![lesson 2 JavaScript](assets/img/lesson2a.png)
+<hr />
+
+![lesson 2 CSS](assets/img/lesson2b.png)
+<hr />
+
+![lesson 2 HTML](assets/img/lesson2c.png)
 
 #### 3. TBD
 Description
@@ -73,14 +80,14 @@ This is a quote and giphy generator app. If you would like to use this app follo
 ## License
 
 MIT License
-Copyright (c) 2023 Twixmixy / Janet Webster
+Copyright (c) 2023
 
 <hr />
 
 ## About The Authors
 ### Andersen Petersen
 
-- [GitHub] (https://github.com/Antedbell20)
+- [GitHub](https://github.com/Antedbell20)
 - [LinkedIn](https://www.linkedin.com/in/andi-petersen-60016b187/)
 
 ### Steven Sills II
