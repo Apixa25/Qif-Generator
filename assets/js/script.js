@@ -20,11 +20,11 @@ function submitWord(e) {
     var wordValue = chooseWord.value;
     console.log("word value: ", wordValue)
     quoteGenerator(wordValue);
-    giphyGenerator(wordValue);
+    var nameValue = userName.value;
+    console.log("name value: ", nameValue)
+    giphyGenerator(wordValue, nameValue);
     chooseWord.value = "";
 }
-
-  
 
 function quoteGenerator(wordValue) {
     var quoteURL = `https://zenquotes.io/api/quotes/20f0ab3d282c49b93e06cf1487491f0d&keyword=${wordValue}`;
@@ -51,14 +51,17 @@ function quoteGenerator(wordValue) {
         })
 }
 
-function giphyGenerator(wordValue) {
-    var giphyURL = `https://api.giphy.com/v1/gifs/random?tag=${wordValue}&rating=g&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
+function giphyGenerator(wordValue, nameValue) {
+    var spaceBetween = " ";
+    var searchTerm = wordValue +  spaceBetween + nameValue;
+    console.log("search term: ", searchTerm)
+    var giphyURL = `https://api.giphy.com/v1/gifs/random?tag=${searchTerm}&rating=g&api_key=T5jopP1Bh8SGzs6g1b6MrMdb26IrnDeC`;
         fetch(giphyURL)
         .then(function (response) {
             return response.json();  
         })
         .then (function (displayGiphy) {
-            console.log("giphy word value: ", wordValue)
+            console.log("giphy word value: ", searchTerm)
             if (loggedWords.includes(wordValue) === false) {
                 loggedWords.push(wordValue);
                 localStorage.setItem("word", JSON.stringify(loggedWords));
