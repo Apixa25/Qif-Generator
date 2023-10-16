@@ -22,8 +22,11 @@
 * [License](#license)
 
 ## Description:
-Our web-based application generates a quote and a giphy image by selecting the word of your choice. The user is presented with a drop-down box for their word and an “Add Word” button. Upon adding the word, a random quote and gif image will display based off of the word selected. The word will then be saved for the user to click as many times as they desire, each time refreshing with a new quote and gif image. The user is also able to click the “Clear Words” button to remove all their previously added words. For this projectused Zenquotes.io and giphy.com.<br />
+Our web-based application generates a quote and a giphy image by selecting the word of your choice. The user is presented with a drop-down box for their word and an “Add Word” button. Upon adding the word, a random quote and gif image will display based off of the word selected. The word will then be saved for the user to click as many times as they desire, each time refreshing with a new quote and gif image. The user is also able to click the “Clear Words” button to remove all their previously added words. For this project we used Zenquotes.io and giphy.com.<br />
 <br />
+
+![Qif App](assets/img/Qif-in-action-2.gif)
+
 How to use this app:
 
 * Use the drop down field to select a word
@@ -32,13 +35,26 @@ How to use this app:
 * Click the buttons of your favorite saved words
 * View your quote and giphy!
 
+### User Stories
+| As a User    | I Want To |     So That     | HTML  | JavaScript |
+| --------  | ------- | ---------  | ---------| ----- |
+| As a USER | I want to put a word into the input box | I can search for a quote and Gif based on that word | field input | the user input is passed to the submitWord function |
+| As a USER | FIRST: Get a quote | So that a quote can be fetched from the API |  | fetchQuote API |
+| As a USER | SECOND: Get a Gif | So that a GIF can be fetched from the API |  | the user input is passed to the  fetchGiphy API function |
+| As a USER | To see a quote | The user can see the quote | will be pushed to pre-assigned <div> | displayQuote |
+| As a USER | To see a GIF | The user can see a GIF | will be pushed to pre-assigned <div> | displayGif |
+
+
 ### Lessons Learned
 
 #### 1. Working with Tailwind
 We learned different classes in Tailwind and how to properly use them to affect our layout. We took lessons from learning Boostrap and reverse engineered some terms to find what we needed. We also consulted the documentation, which was very helpful.
 <br />
 ![lesson 1](assets/img/lesson1.png)
-
+<br />
+Mobile Tailwind UI In Action
+<br />
+![Qif Mobile](assets/img/Granim-changing-size.gif)
 #### 2. Working with granim
 We learned how to create a gradient background using granim. We were reminded on the z-index during this part of the project. For this tool we had to utilize JS, CSS, and HTML to implement.
 <br />
